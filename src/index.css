@@ -1,0 +1,30 @@
+/* ============================================================
+   UCIMS — Global Styles
+   src/index.css
+   ============================================================ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Leaflet map fix — remove focus outline on map tiles */
+.leaflet-container:focus { outline: none; }
+.leaflet-tile-pane { filter: saturate(0.85) brightness(0.95); }
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: #d1d5db; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+/* Leaflet popup styling */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12) !important;
+  border: 1px solid #f3f4f6;
+}
+.leaflet-popup-tip { background: white !important; }
+.leaflet-popup-content { margin: 14px 16px !important; }
